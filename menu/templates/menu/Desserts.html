@@ -1,0 +1,28 @@
+{% extends 'menu/base.html' %}
+{% block title %}Cafeteria | Menu | desserts{% endblock %}
+{% block body %}
+    <br>
+    <br>
+    <div class="row">
+
+        {% for desserts in all_desserts %}
+           <div class="col-sm-4 col-lg-4">
+                <div class="thumbnail">
+                   <!--  Album Logo-->
+                    <a href="#">
+                        <img src="{{ desserts.desserts_image.url }}" class="img-responsive" style="height: 300px; width: fit-content;">
+                    </a>
+
+                    <div class="caption">
+                        <h2>{{ desserts.desserts }}</h2><h2>{{ desserts.desserts_amt }}</h2>
+
+                         <!--  details-->
+                        <a href="#" class="btn btn-primary btn-sm">Add to cart</a>
+
+                    </div>
+
+                </div>
+           </div>
+       {% endfor %}
+</div>
+{% endblock %}

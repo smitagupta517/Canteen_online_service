@@ -1,0 +1,33 @@
+<!--{% for field in form %}
+     <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-12">
+            <span class="text-danger small">{{ field.errors }}</span>
+        </div>
+        <label class="control-label col-sm-4">{{ field.label_tag }}</label>
+        <div class="col-sm-10">{{ field }}</div>
+
+
+    </div>
+{% endfor %}-->
+    <div class="sminputs">
+              <div class="input full">
+                <label class="string optional" for="user-name">Username*</label>
+                <input class="string optional" maxlength="255" id="username" placeholder="Username" type="text" size="15" />
+              </div>
+            </div>
+              <div class="sminputs">
+              <div class="input full">
+                <label class="string optional" for="email">Email*</label>
+                <input class="string optional" maxlength="255" id="email" placeholder="Email" type="email" size="15" />
+              </div>
+            </div>
+            <div class="sminputs">
+              <div class="input string optional">
+                <label class="string optional" for="user-pw">Password *</label>
+                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="text" size="20" />
+              </div>
+              <div class="input string optional">
+                <label class="string optional" for="user-pw-repeat">Confirm password *</label>
+                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="Confirm password" type="text" size="50" />
+              </div>
+            </div>

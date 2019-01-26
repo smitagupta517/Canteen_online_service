@@ -1,0 +1,28 @@
+{% extends 'menu/base.html' %}
+{% block title %}Cafeteria | Menu{% endblock %}
+{% block body %}
+    <br>
+    <br>
+    <div class="row">
+
+        {% for category in all_menu %}
+           <div class="col-sm-4 col-lg-4">
+                <div class="thumbnail">
+                   <!--  Album Logo-->
+                    <a href="#">
+                        <img src="{{ category.image.url }}" class="img-responsive" style="height: 300px; width: fit-content;">
+                    </a>
+
+                    <div class="caption">
+                        <h2>{{ category.category }}</h2>
+
+                         <!--  details-->
+                        <a href="{% url 'menu:detail'%}{{ category.category }}" class="btn btn-primary btn-sm">View Details</a>
+
+                    </div>
+
+                </div>
+           </div>
+       {% endfor %}
+</div>
+{% endblock %}
